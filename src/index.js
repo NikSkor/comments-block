@@ -3,36 +3,46 @@ import './index.scss';
 import { renderComments } from './modules/renderComments';
 import { saveComment } from './modules/saveComment';
 import { store } from './modules/store';
+import { validateForm } from './modules/validateForm';
 
 renderComments(store);
 
 let form = document.querySelector('.form');
 let name = form.name;
+// console.log('name: ', name);
 let date = form.date;
 let comment = form.comment;
+// console.log('comment: ', comment);
 let btn = document.querySelector('.form__submit'); 
 
-// name.onchange = (e) => {
-//   if(name.value === '') console.log('kuku');
-//   console.log(name.value);
-// }
-
-// name.oninput = (e) => {
-//   console.log(name.value);
-// }
-
-// comment.oninput = (e) => {
-//   console.log(comment.value);
-// };
-
-// date.onchange = (e) => {
-//   console.log(date.valueAsNumber);
-// }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if(name.value === '' || comment.value === '') return;
+  validateForm(name);
+  validateForm(comment);
+
+  if (name.value === '' || comment.value === '') {
+    
+    name.addEventListener('input', () => {
+      // console.log('lulu');
+      validateForm(name);
+    });
+
+    comment.addEventListener('input', ()=> {
+      // console.log('zuzu');
+      validateForm(comment);
+    });
+    return;
+  }
+
+  // if (comment.value === '') {
+  //   comment.addEventListener('input', ()=> {
+  //     console.log('zuzu');
+  //     validateForm(comment);
+  //   });
+  //   return;
+  // }
 
   let userName = name.value;
   let userComment = comment.value;
@@ -45,9 +55,16 @@ form.addEventListener('submit', (e) => {
     console.log('oldDate: ', oldDate);
     let now = new Date();
     // console.log('now: ', now.getMinutes().length);
-    let nowHour = (now.getHours() >= 10) ? now.getHours() : '0' + now.getHours().toString();
-    let nowMinutes = (now.getMinutes() >= 10) ? now.getMinutes() : '0' + now.getMinutes().toString();
-    let nowSeconds = (now.getSeconds() >= 10) ? now.getSeconds() : '0' + now.getSeconds().toString();
+    let nowHour =
+      now.getHours() >= 10 ? now.getHours() : '0' + now.getHours().toString();
+    let nowMinutes =
+      now.getMinutes() >= 10
+        ? now.getMinutes()
+        : '0' + now.getMinutes().toString();
+    let nowSeconds =
+      now.getSeconds() >= 10
+        ? now.getSeconds()
+        : '0' + now.getSeconds().toString();
 
     let rightDate = `${oldDate}T${nowHour}:${nowMinutes}:${nowSeconds}`;
     dateOfComment = new Date(rightDate);
@@ -58,6 +75,7 @@ form.addEventListener('submit', (e) => {
   console.log(store);
   renderComments(store);
 
+  form.reset();
 });
 
 
