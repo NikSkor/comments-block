@@ -6,6 +6,7 @@ export const saveComment = (name, text, date) => {
     name: name,
     text: text,
     date: date,
+    isLike: false,
   } 
 
   commentObj = assignId(commentObj);

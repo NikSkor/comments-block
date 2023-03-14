@@ -5,9 +5,11 @@ import { saveComment } from './modules/saveComment';
 import { store } from './modules/store';
 import { validateForm } from './modules/validateForm';
 
-renderComments(store);
+console.log(store);
 
 let form = document.querySelector('.form');
+const formComments = document.querySelector('.form__comments');
+
 let name = form.name;
 // console.log('name: ', name);
 let date = form.date;
@@ -72,12 +74,13 @@ form.addEventListener('submit', (e) => {
 
   saveComment(userName, userComment, dateOfComment);
 
-  console.log(store);
-  renderComments(store);
+  // console.log(store);
+  renderComments(store, formComments);
 
   form.reset();
 });
 
+// renderComments(store, formComments);
 
 // const formatDate = (date) => {
 //   const options = {

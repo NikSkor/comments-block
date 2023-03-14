@@ -1,0 +1,78 @@
+.comments {
+
+  &__title {
+    display: flex;
+    border-top: 1px solid $black;
+    padding-top: 20px;
+    flex-basis: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  &__item {
+    border-top: 1px solid $black;
+    padding-top: 20px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 10fr 1fr 25px;
+    grid-template-areas:
+      'title date like'
+      'comment comment del'
+    ;
+    grid-gap: 20px;
+  }
+
+  &__name {
+    grid-area: title;
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-end;
+  }
+
+  &__text {
+    grid-area: comment;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+    min-height: 80px;
+    width: 727px;
+    word-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &__date {
+    grid-area: date;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    align-self: flex-end;
+  }
+
+  &__like {
+    grid-area: like;
+    align-self: end;
+  }
+
+  &__delete {
+    grid-area: del;
+  }
+
+  &__link {
+    color: $black;
+    cursor: pointer;
+    transition: 0.3s color ease-in-out;
+    &:hover {
+      color: red;
+    }
+
+    &_active {
+      color: red;
+    }
+  }
+}
+

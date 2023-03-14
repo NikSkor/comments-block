@@ -8,26 +8,14 @@
     gap: 16px 12px;
     border-radius: 10px;
     background-color: #E4F2FF;
-    // flex-direction: column;
-    // align-items: flex-end;
     justify-content: center;
     padding-top: 20px;
-    // padding-bottom: 20px;
     
   }
   
   &__label {
     flex: 1 1 300px;
     position: relative;
-    // display: flex;
-    // flex-direction: column;
-    // padding-bottom: 10px;
-    // padding: 0;
-    // position: relative;
-
-    // &-text {
-    //   // flex-basis: 70%;
-    // }
 
     &-date {
       flex-basis: 20%;
@@ -40,15 +28,12 @@
     &-btn {
       display: flex;
       flex-basis: 100%;
-      // position: absolute;
-      // align-self: flex-end;
       justify-content: flex-end;
     }
   }
 
   &__comments {
     display: flex;
-    border-top: 1px solid #000;
     flex-basis: 100%;
     justify-content: center;
     padding-top: 20px;
@@ -95,7 +80,6 @@
     cursor: pointer;
     transition: 0.5s all;
     height: 46px;
-    // justify-self: baseline;
 
     &:hover {
       background-color: $white;
@@ -105,14 +89,8 @@
 
   &__warning {
     color: red;
-    // margin-top: 10px;
-    // margin-top: 10px;
     position: absolute;
     left: 0;
     top: 90%;
   }
-}
-
-.comments__title {
-  display: flex;
 }
