@@ -5,14 +5,16 @@ import { createElement } from "./utils/createElement";
 
 
 export const renderComments = (store, parent) => {
-  // if (store.length === 0) return;
-
-  // console.log(store);
-
-  let text = parent.innerHTML;
-
   parent.innerHTML = '';
 
+  if (store.length === 0) {
+    createElement('p', {
+      className: 'comments__title',
+      textContent: 'Комментариев пока нет',
+    }, {
+      parent: parent,
+    });
+  }
   let ul = createElement(
     'ul',
     {
@@ -34,12 +36,6 @@ export const renderComments = (store, parent) => {
       renderComments(store, parent);
     } 
   });
-
-  console.log(store);
-
-  if (parent.innerHTML === '') {
-    parent.innerHTML = text;
-  }
 };
 
 

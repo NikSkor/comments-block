@@ -1,4 +1,5 @@
 import {createElement} from "./utils/createElement";
+import {formatDate} from "./utils/formatDate";
 
 export const createComment = (store) => {
 let li = createElement(
@@ -35,6 +36,7 @@ createElement(
   'span',
   {
     className: 'comments__date',
+    textContent: formatDate(store.date),
   },
   {
     parent: li,

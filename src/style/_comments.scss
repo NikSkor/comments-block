@@ -3,8 +3,11 @@
   &__title {
     display: flex;
     border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
     padding-top: 20px;
+    padding-bottom: 20px;
     flex-basis: 100%;
+    justify-content: center;
   }
 
   &__list {
@@ -18,7 +21,7 @@
     padding-top: 20px;
     display: grid;
     align-items: start;
-    grid-template-columns: 10fr 1fr 25px;
+    grid-template-columns: 1fr 180px 25px;
     grid-template-areas:
       'title date like'
       'comment comment del'
@@ -51,6 +54,7 @@
     font-size: 16px;
     font-weight: 500;
     align-self: flex-end;
+    justify-self: end;
   }
 
   &__like {

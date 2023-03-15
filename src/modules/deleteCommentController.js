@@ -7,7 +7,7 @@ export const deleteCommentController = (e, store) => {
   console.log('id: ', id);
 
   let index;
-// console.log(store[0]);
+
   if (store.length === 1) {
     store.length = 0;
     return;
