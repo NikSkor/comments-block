@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-300.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-500.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-700.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-regular.woff2" as="font" crossorigin>
+
+  <title>Comments</title>
+</head>
+<body>
+  <section class="main">
+      <div class="container main__container">
+        <h1 class="main__title">Оставьте свой комментарий</h1>
+        <form class="form">
+          <fieldset class="form__fieldset">
+            <label class="form__label form__label-text">
+              <span class="form__text">Имя</span>
+              <input type="text" name = 'name' class="form__input" />
+            </label>
+            <label class="form__label form__label-date">
+              <span class="form__text">Дата опубликования</span>
+              <input type="date" name = 'date' class="form__input" />
+            </label>
+            <label class="form__label form__label-comment">
+              <span class="form__text">Комментарий</span>
+              <textarea name = 'comment' class="form__textarea"></textarea>
+            </label>
+            <label class="form__label form__label-btn">
+              <input type="submit" value="Опубликовать" class="form__submit">
+            </label>
+            <div class="form__comments comments">
+              <p class="comments__title">Комментариев пока нет</p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+  </section>
+
+</body>
+</html>

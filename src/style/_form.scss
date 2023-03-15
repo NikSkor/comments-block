@@ -1,0 +1,96 @@
+.form {
+
+  &__fieldset {
+    width: 800px;
+    min-height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 12px;
+    border-radius: 10px;
+    background-color: #E4F2FF;
+    justify-content: center;
+    padding-top: 20px;
+    
+  }
+  
+  &__label {
+    flex: 1 1 300px;
+    position: relative;
+
+    &-date {
+      flex-basis: 20%;
+    }
+
+    &-comment {
+      flex-basis: 100%;
+    }
+
+    &-btn {
+      display: flex;
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  &__comments {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+
+  }
+
+  &__input {
+    width: 100%;
+    height: 46px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+    min-height: 80px;
+    resize: vertical;
+    margin-bottom: 20px;
+  }
+
+  &__submit {
+    display: block;
+    padding: 10px 20px;
+    background-color: $bg-color;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid $dark-gray;
+    cursor: pointer;
+    transition: 0.5s all;
+    height: 46px;
+
+    &:hover {
+      background-color: $white;
+      color: $gray;
+    }
+  }
+
+  &__warning {
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 90%;
+  }
+}
