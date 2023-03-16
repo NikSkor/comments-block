@@ -1,7 +1,7 @@
-import { createComment } from "./createComment";
-import { deleteCommentController } from "./deleteCommentController";
-import { likeController } from "./likeController";
-import { createElement } from "./utils/createElement";
+import {createComment} from "./createComment";
+import {deleteCommentController} from "./deleteCommentController";
+import {likeController} from "./likeController";
+import {createElement} from "./utils/createElement";
 
 
 export const renderComments = (store, parent) => {
