@@ -1,6 +1,6 @@
-import { renderComments } from "./renderComments";
-import { saveComment } from "./saveComment";
-import { validateForm } from "./validateForm";
+import {renderComments} from "./renderComments";
+import {saveComment} from "./saveComment";
+import {validateForm} from "./validateForm";
 
 export const formController = (form, store, formComments) => {
   const name = form.name;
